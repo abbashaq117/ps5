@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="haqno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-26 08:53:20 PM"/>
+        <attribute name="created" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjY7MDg6MTA6NDMgUE07Mjg3OQ=="/>
+        <attribute name="edited" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjY7MDg6NTM6MjAgUE07MTsyOTg5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="city" type="String" array="False" size=""/>
+            <declare name="miles" type="Real" array="False" size=""/>
+            <declare name="gallons" type="Real" array="False" size=""/>
+            <declare name="costg" type="Real" array="False" size=""/>
+            <declare name="mpg" type="Real" array="False" size=""/>
+            <output expression="&quot;Enter what city your going to&quot;" newline="True"/>
+            <input variable="city"/>
+            <output expression="&quot;Enter the miles traveled&quot;" newline="True"/>
+            <input variable="miles"/>
+            <output expression="&quot;Enter gallons used&quot;" newline="True"/>
+            <input variable="gallons"/>
+            <assign variable="costg" expression="gallons * 2.50"/>
+            <output expression="&quot;Your city is: &quot; &amp; city &amp; &quot;miles traved are: &quot; &amp; miles &amp; &quot;and amount paied for gallons is: &quot; &amp; costg" newline="True"/>
+        </body>
+    </function>
+    <function name="cost" type="None" variable="">
+        <parameters>
+            <parameter name="miles" type="Real" array="False"/>
+            <parameter name="gallons" type="Real" array="False"/>
+        </parameters>
+        <body>
+            <declare name="costofgallon" type="Integer" array="False" size=""/>
+            <assign variable="costofgallon" expression="gallons * 2.50"/>
+        </body>
+    </function>
+</flowgorithm>

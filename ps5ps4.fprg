@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="haqno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-26 10:47:47 PM"/>
+        <attribute name="created" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjY7MDk6MjI6NDcgUE07Mjg4Nw=="/>
+        <attribute name="edited" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjY7MTA6NDc6NDcgUE07MTsyOTk0"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="jobCode" type="String" array="False" size=""/>
+            <declare name="hw" type="Real" array="False" size=""/>
+            <declare name="rate" type="Integer" array="False" size=""/>
+            <output expression="&quot;Please enter your lastname&quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Please enter your jobcode L(25), A(30),J(50)&quot;" newline="True"/>
+            <input variable="jobCode"/>
+            <output expression="&quot;Please enter hours worked&quot;" newline="True"/>
+            <input variable="hw"/>
+            <assign variable="rate" expression="jobcode(jobCode)"/>
+            <output expression="lastname &amp; &quot; Worked this many hours: &quot; &amp; hw &amp; &quot; and made this much:  &quot; &amp; rate * hw" newline="True"/>
+        </body>
+    </function>
+    <function name="jobcode" type="Integer" variable="pay">
+        <parameters>
+            <parameter name="code" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="pay" type="Real" array="False" size=""/>
+            <if expression="code == &quot;L&quot;">
+                <then>
+                    <assign variable="pay" expression="25"/>
+                </then>
+                <else>
+                    <if expression="code == &quot;A&quot;">
+                        <then>
+                            <assign variable="pay" expression="30"/>
+                        </then>
+                        <else>
+                            <if expression="code == &quot;J&quot;">
+                                <then>
+                                    <assign variable="pay" expression="50"/>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

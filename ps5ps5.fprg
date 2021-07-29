@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="haqno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-27 12:40:32 AM"/>
+        <attribute name="created" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjY7MTA6NDg6MDIgUE07Mjg3OA=="/>
+        <attribute name="edited" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjc7MTI6NDA6MzIgQU07MTsyOTY5"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="credit" type="Real" array="False" size=""/>
+            <declare name="district" type="String" array="False" size=""/>
+            <declare name="tuition" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter lastName&quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Please enter credit hours&quot;" newline="True"/>
+            <input variable="credit"/>
+            <output expression="&quot;Please enter district code I=(250) O=(550)&quot;" newline="True"/>
+            <input variable="district"/>
+            <assign variable="tuition" expression="distirctCode(district)"/>
+            <output expression="lastname &amp; &quot;owed&quot; &amp; tuition" newline="True"/>
+        </body>
+    </function>
+    <function name="distirctCode" type="Integer" variable="credit">
+        <parameters>
+            <parameter name="district" type="String" array="False"/>
+        </parameters>
+        <body>
+            <declare name="credit" type="Real" array="False" size=""/>
+            <if expression="district == &quot;I&quot;">
+                <then>
+                    <assign variable="credit" expression="250"/>
+                </then>
+                <else>
+                    <if expression="district == &quot;O&quot;">
+                        <then>
+                            <assign variable="credit" expression="500"/>
+                        </then>
+                        <else/>
+                    </if>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

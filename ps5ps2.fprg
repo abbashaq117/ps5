@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="2.11">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="haqno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2021-07-26 07:57:41 PM"/>
+        <attribute name="created" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjY7MDc6MTc6MTkgUE07Mjg4OA=="/>
+        <attribute name="edited" value="aGFxbm87REVTS1RPUC0yQUtRM09QOzIwMjEtMDctMjY7MDc6NTc6NDEgUE07MTsyOTk1"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="lastname" type="String" array="False" size=""/>
+            <declare name="bats" type="Integer" array="False" size=""/>
+            <declare name="key" type="Integer" array="False" size=""/>
+            <declare name="average" type="Real" array="False" size=""/>
+            <output expression="&quot;Please enter your last name&quot;" newline="True"/>
+            <input variable="lastname"/>
+            <output expression="&quot;Please enter number of hits&quot;" newline="True"/>
+            <input variable="bats"/>
+            <output expression="&quot;Please enter bats at the keyboard&quot;" newline="True"/>
+            <input variable="key"/>
+            <assign variable="average" expression="(bats/key)"/>
+            <output expression="lastname &amp; &quot;'s batting average is &quot; &amp; average" newline="True"/>
+        </body>
+    </function>
+    <function name="comp" type="Integer" variable="average">
+        <parameters>
+            <parameter name="bats" type="Integer" array="False"/>
+            <parameter name="key" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="average" type="Real" array="False" size=""/>
+            <assign variable="average" expression="( bats / key )"/>
+        </body>
+    </function>
+</flowgorithm>
